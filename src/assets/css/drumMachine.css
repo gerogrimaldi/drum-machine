@@ -1,0 +1,53 @@
+#display {
+    width: auto;
+    height: 350px;
+    color: black;
+    border-radius: 10px;
+    display:flex;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    padding: 12px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.drum-pad{
+    color: black;
+    background-color: #046e5e;
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    border-radius: 4px;
+    margin:5px;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#pads{
+    display: inline-block;
+    width: 350px;
+}
+.drum-pad a{
+    color: white;
+    text-decoration: none;
+    background-color: 59F7E0;
+}
+.drum-pad:hover{
+    box-shadow: 0px 0px 5px 5px lightsalmon;
+}
+
+.card{
+    height:50px;
+    display: flex;
+}
+
+.active{
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    background-color: orange;
+    transition: all 2ms 2ms; 
+    transition-duration: 10ms;
+}
