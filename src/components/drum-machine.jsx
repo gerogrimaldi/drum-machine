@@ -19,7 +19,7 @@ class DrumMachine extends React.Component {
         const { keys } = this.state;
         return (
             <div id="drum-machine" className="container">
-                <div className="row mt-5 justify-content-center">
+                <div className="row mt-5 justify-content-center mb-3">
                     <div className="col-md-6">
                         <div id="display">
                             <div id="pads">
