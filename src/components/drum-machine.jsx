@@ -22,15 +22,17 @@ class DrumMachine extends React.Component {
                 <div className="row mt-5 justify-content-center mb-3">
                     <div className="col-md-6">
                         <div id="display">
-                            <div id="pads">
+                            <div id="pads" className="pads">
                                 {
                                     keys.map((key, index) => {
                                         return <DrumPad text={key} key={index} ref={this.PadRef} />
                                     })
                                 }
                             </div>
-                            <div id="pad-info" className="">
-                                <h3> </h3>
+                            <div id="pad-info" className="pad-info">
+                                <div id="pad-info-container" className="pad-info-container">
+                                    <span> </span>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -21,8 +21,8 @@ class DrumPad extends React.Component {
             sound.volume = 0.4
             sound.play();
             //show text
-            const display = document.getElementById("pad-info");
-            display.querySelector('h3').innerText = this.state.key.id;
+            const display = document.getElementById("pad-info-container");
+            display.querySelector('span').innerText = this.state.key.id;
             //remove class active
             sound.addEventListener('ended', () => {
                 parent.classList.remove("active");

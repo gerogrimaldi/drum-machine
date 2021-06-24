@@ -1,17 +1,25 @@
 #display {
-    width: auto;
+    width: 600px;
     height: 350px;
     color: black;
     border-radius: 10px;
-    display:flex;
-    /* border: 1px solid black; */
-    flex-wrap: wrap;
-    padding: 12px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    /* grid */
+    display: grid;
+    gap:2px;
+    min-height: 100%;
+    grid-template-areas:
+        "pads"
+        "pad-info";
+}
+
+#pads{
+    margin:auto;
 }
 
 .drum-pad{
+    box-sizing: border-box;
     color: black;
     background-color: #046e5e;
     height: 100px;
@@ -24,10 +32,63 @@
     font-size: 20px;
     font-weight: bold;
 }
-
-#pads{
+.pad-info {
+    margin: auto;
     display: inline-block;
-    width: 350px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pad-info-container{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+.pad-info-container span{
+    position: relative;
+    top: 5%;
+}
+
+@media (min-width: 600px){
+    #display {
+        grid-template-columns: 350px 250px;
+        grid-template-areas: 
+        "pads pad-info"
+    }
+}
+
+@media (max-width: 600px){
+    #display {
+        width: 400px;
+        height: 400px;
+        gap: 0px;
+        grid-template-columns: 400px;
+        grid-template-areas: 
+        "pad-info"
+        "pads";
+    }
+}
+@media (max-width: 400px){
+    #display {
+        width: 300px;
+        height: 400px;
+        gap: 0px;
+        grid-template-columns: 300px;
+        grid-template-areas: 
+        "pad-info"
+        "pads";
+    }
+    .drum-pad{
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
+        margin:2px;
+    }
 }
 .drum-pad a{
     color: white;

@@ -1,14 +1,29 @@
+body {
+  margin: 0;
+}
+
+#root {
+  text-align: right;
+  /* media queries */
+  @media (max-width: 767px) {
+    align-items: center;
+  };
+  @media (max-width: 400px) {
+    align-items: left;
+  }
+}
+
 .App {
   background-color: #046e5e ;
   text-align: center;
   min-height: 100vh;
   display: flex;
+  padding: 1em 2em;
+  width: auto;
+  /* align-items: center; */
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .App-header {
   min-height: 100vh;
@@ -24,11 +39,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
